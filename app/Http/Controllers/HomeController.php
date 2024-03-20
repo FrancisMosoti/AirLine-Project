@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Plane;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,39 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function addPlane()
+    {
+        return view('add_flights');
+    }
+
+    public function regPlane(){
+        return view('reg-plane');
+    }
+    public function profile(){
+        return view('profile');
+    }
+
+    public function storePlane(Request $request)
+    {
+        $request->validate([
+            'plane' => 'required|string|max:255|min:3',
+            'classA' => ['required','numeric'],
+            'classB' => ['required','numeric'],
+            'classC' => ['required','numeric'],
+        ]);
+
+        Plane::create([
+            'Plane_name' => $request->input('plane'),
+            'Class_A' => $request->input('classA'),
+            'Class_B' => $request->input('classB'),
+            'Class_C' => $request->input('classC'),
+            
+        ]);
+
+
+        return redirect('/reg-plane')->with('success', 'Plane Registered Successful');
+        
     }
 }

@@ -11,7 +11,7 @@
     <style type="text/css">
         .div_deg {
             background-color: rgb(0, 0, 0, 0.8);
-            width: 500px;
+            width: 700px;
             padding-top: 70px;
             padding-bottom: 70px;
         }
