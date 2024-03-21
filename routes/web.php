@@ -18,6 +18,12 @@ Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])-
 Route::get('/flight-schedule', [App\Http\Controllers\HomeController::class, 'schedule'])->name('schedule');
 Route::post('/flight-schedule', [App\Http\Controllers\HomeController::class, 'scheduleFlight'])->name('schedule');
 
+Route::get('/manage-planes', [App\Http\Controllers\HomeController::class, 'manage'])->name('manage');
+Route::delete('/planes/{id}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('plane.destroy');
+
+Route::get('/manage-flight', [App\Http\Controllers\HomeController::class, 'manageFlight'])->name('manage.flight');
+Route::delete('/flight/{id}', [App\Http\Controllers\HomeController::class, 'destroyFlight'])->name('flight.destroy');
+
 
 Route::get('/flights', [App\Http\Controllers\BookController::class, 'flight'])->name('flights');
 Route::get('/change-booking', [App\Http\Controllers\BookController::class, 'changeFlight'])->name('change-booking');

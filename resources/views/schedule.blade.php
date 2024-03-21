@@ -36,14 +36,11 @@
                             <label style="color: rgb(252, 254, 254)" id="plane">Plane Name</label>
 
                             <select id="town" name="plane" id="plane"
-                                class="form-select @error('plane') is-invalid @enderror"
-                               >
+                                class="form-select @error('plane') is-invalid @enderror">
                                 <option value="" selected>Select Plane</option>
                                 @foreach ($planes as $plane)
                                     <option value="{{ $plane->Plane_name }}">{{ $plane->Plane_name }}</option>
                                 @endforeach
-
-
                             </select>
                             @error('plane')
                                 <span class="invalid-feedback" role="alert">
@@ -101,8 +98,7 @@
                         <div class="mb-4">
                             <label style="color: rgb(252, 254, 254)">Destination:</label>
                             <select id="town" name="destination"
-                                class="form-select @error('destination') is-invalid @enderror"
-                                 >
+                                class="form-select @error('destination') is-invalid @enderror">
                                 <option value="" selected>Select Airport</option>
                                 <option value="Nairobi">Nairobi</option>
                                 <option value="Kisumu">Kisumu</option>
@@ -117,36 +113,39 @@
                         </div>
 
                         <div class="mb-4">
-                            <label style="color: rgb(252, 254, 254)" id="planeA">Class A Flight</label>
+                            <label style="color: rgb(252, 254, 254)" id="planeA">Class A Price</label>
                             <input type="number" name="priceA" id="planeA"
-                                class="form-control @error('priceA') is-invalid @enderror" value="{{ old('priceA')?old('priceA'):'' }}">
-                                @error('priceA')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                class="form-control @error('priceA') is-invalid @enderror"
+                                value="{{ old('priceA') ? old('priceA') : '' }}">
+                            @error('priceA')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
                         <div class="mb-4">
-                            <label style="color: rgb(252, 254, 254)" id="planeA">Class B Flight</label>
+                            <label style="color: rgb(252, 254, 254)" id="planeA">Class B Price</label>
                             <input type="number" name="priceB" id="planeB"
-                                class="form-control @error('priceB') is-invalid @enderror" value="{{ old('priceB')?old('priceB'):'' }}">
-                                @error('priceB')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                class="form-control @error('priceB') is-invalid @enderror"
+                                value="{{ old('priceB') ? old('priceB') : '' }}">
+                            @error('priceB')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
                         <div class="mb-4">
-                            <label style="color: rgb(252, 254, 254)" id="planeA">Class C Flight</label>
+                            <label style="color: rgb(252, 254, 254)" id="planeA">Class C Price</label>
                             <input type="number" name="priceC" id="planeC"
-                                class="form-control @error('priceC') is-invalid @enderror" value="{{ old('priceC')?old('priceC'):'' }}">
-                                @error('priceC')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                class="form-control @error('priceC') is-invalid @enderror"
+                                value="{{ old('priceC') ? old('priceC') : '' }}">
+                            @error('priceC')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
 

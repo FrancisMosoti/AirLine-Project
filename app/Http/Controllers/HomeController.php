@@ -44,6 +44,13 @@ class HomeController extends Controller
         return view('schedule', ['planes' => Plane::all()]);
     }
 
+    public function manage(){
+        return view('manage-planes', ['planes' => Plane::all()]);
+    }
+    public function manageFlight(){
+        return view('manage-flights', ['schedules' => Schedule::all()]);
+    }
+
     public function storePlane(Request $request)
     {
         $request->validate([
@@ -94,5 +101,34 @@ class HomeController extends Controller
 
         return redirect('/flight-schedule')->with('success', 'Plane Scheduled Successfully');
         
+    }
+
+    public function destroy($id)
+    {
+        // Find the item
+        $item = Plane::find($id);
+        
+        if ($item) {
+            // Delete the item
+            $item->delete();
+            return redirect()->back()->with('success', 'Plane deleted successfully.');
+        } else {
+            return redirect()->back()->with('error', 'Plane not found.');
+        }
+    }
+
+
+    public function destroyFlight($id)
+    {
+        // Find the item
+        $item = Schedule::find($id);
+        
+        if ($item) {
+            // Delete the item
+            $item->delete();
+            return redirect()->back()->with('success', 'Plane Schedule deleted successfully.');
+        } else {
+            return redirect()->back()->with('error', 'Schedule not found.');
+        }
     }
 }
