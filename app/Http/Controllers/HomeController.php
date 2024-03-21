@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Plane;
+use App\Models\Schedule;
 
 class HomeController extends Controller
 {
@@ -39,6 +40,10 @@ class HomeController extends Controller
         return view('profile');
     }
 
+    public function schedule(){
+        return view('schedule', ['planes' => Plane::all()]);
+    }
+
     public function storePlane(Request $request)
     {
         $request->validate([
@@ -58,6 +63,36 @@ class HomeController extends Controller
 
 
         return redirect('/reg-plane')->with('success', 'Plane Registered Successful');
+        
+    }
+
+    public function scheduleFlight(Request $request)
+    {
+        $request->validate([
+            'plane' => 'required|string|max:255|min:3',
+            'time' => 'required|date_format:H:i',
+            'date' => 'required|date_format:Y-m-d|after:yesterday',
+            'depart' => ['required','string'],
+            'destination' => ['required','string'],
+            'priceA' => ['required','numeric'],
+            'priceB' => ['required','numeric'],
+            'priceC' => ['required','numeric'],
+        ]);
+
+        Schedule::create([
+            'plane' => $request->input('plane'),
+            'time' => $request->input('time'),
+            'date' => $request->input('date'),
+            'destination' => $request->input('destination'),
+            'depart' => $request->input('depart'),
+            'priceA' => $request->input('priceA'),
+            'priceB' => $request->input('priceB'),
+            'priceC' => $request->input('priceC'),
+            
+        ]);
+
+
+        return redirect('/flight-schedule')->with('success', 'Plane Scheduled Successfully');
         
     }
 }

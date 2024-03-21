@@ -10,9 +10,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/add-plane', [App\Http\Controllers\HomeController::class, 'addPlane'])->name('add-plane');
+
 Route::get('/reg-plane', [App\Http\Controllers\HomeController::class, 'regPlane'])->name('reg-plane');
 Route::post('/reg-plane', [App\Http\Controllers\HomeController::class, 'storePlane'])->name('reg-plane');
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
+
+Route::get('/flight-schedule', [App\Http\Controllers\HomeController::class, 'schedule'])->name('schedule');
+Route::post('/flight-schedule', [App\Http\Controllers\HomeController::class, 'scheduleFlight'])->name('schedule');
 
 
 Route::get('/flights', [App\Http\Controllers\BookController::class, 'flight'])->name('flights');
