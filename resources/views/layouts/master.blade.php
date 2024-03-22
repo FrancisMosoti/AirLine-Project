@@ -11,19 +11,19 @@
 </head>
 <body>
 
-    <header class="header">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="bg-blue">
+    <nav class="navbar navbar-expand-lg text-white">
   <div class="container-fluid">
-    <a class="navbar-brand margin-right" href="#">Air <i class="fa-solid fa-plane-departure"></i> Away</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand margin-right text-white" href="#">Air <i class="fa-solid fa-plane-departure"></i> Away</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse text-white" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link" >Disabled</a>
+        <a class="nav-link active text-white pl-2" aria-current="page" href="#">Home</a>
+        <a class="nav-link text-white pl-2" href="#">Explore</a>
+        <a class="nav-link text-white pl-2" href="#">Booking</a>
+        <a class="nav-link text-white pl-2" >Help</a>
       </div>
     </div>
   </div>
@@ -31,9 +31,9 @@
     </header>
     @yield("content")
 
-    <footer>
+    <footer class="pt-4 mt-4 ">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 pl-4">
                 <h1 class="text-center">About Us</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea incidunt veritatis debitis animi quaerat laboriosam esse qui facilis totam odio?</p>
             </div>
