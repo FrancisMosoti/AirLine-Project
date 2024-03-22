@@ -24,7 +24,10 @@ Route::delete('/planes/{id}', [App\Http\Controllers\HomeController::class, 'dest
 Route::get('/manage-flight', [App\Http\Controllers\HomeController::class, 'manageFlight'])->name('manage.flight');
 Route::delete('/flight/{id}', [App\Http\Controllers\HomeController::class, 'destroyFlight'])->name('flight.destroy');
 
+Route::get('/search-flight', [App\Http\Controllers\HomeController::class, 'searchFlight'])->name('flight.search');
+Route::post('/search-flight', [App\Http\Controllers\HomeController::class, 'flightSearch'])->name('flight.search');
 
 Route::get('/flights', [App\Http\Controllers\BookController::class, 'flight'])->name('flights');
+
 Route::get('/change-booking', [App\Http\Controllers\BookController::class, 'changeFlight'])->name('change-booking');
 Route::get('/view-booking', [App\Http\Controllers\BookController::class, 'viewFlight'])->name('view-booking');

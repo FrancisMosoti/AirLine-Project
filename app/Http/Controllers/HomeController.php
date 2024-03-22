@@ -51,6 +51,12 @@ class HomeController extends Controller
         return view('manage-flights', ['schedules' => Schedule::all()]);
     }
 
+    public function searchFlight(){
+        return view('search-flight');
+    }
+
+
+
     public function storePlane(Request $request)
     {
         $request->validate([
@@ -100,6 +106,28 @@ class HomeController extends Controller
 
 
         return redirect('/flight-schedule')->with('success', 'Plane Scheduled Successfully');
+        
+    }
+
+    public function flightSearch(Request $request)
+    {
+        $request->validate([
+            'date' => 'required|date_format:Y-m-d|after:yesterday',
+            'depart' => ['required','string'],
+            'destination' => ['required','string'],
+        ]);
+
+
+        $date  = $request->input('date');
+        $destination = $request->input('destination');
+        $depart = $request->input('depart');
+
+        $departures = Schedule::where('destination', $destination)
+                            ->where('depart', $depart)
+                            ->where('date', $date)
+                            ->get();
+
+        return view('available-flights', compact('departures'));
         
     }
 
