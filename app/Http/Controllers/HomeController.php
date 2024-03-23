@@ -162,5 +162,26 @@ class HomeController extends Controller
         }
 
     }
-}
+    public function book_Enq(Request $request)
+    {
+        // $date  = $request->input('date');
+        $destination = $request->input('destination');
+        $depart = $request->input('depart');
+        $plane = $request->input('name');
+        $price = $request->input('price');
 
+        $data = array(
+            'destination' => $destination, 
+            'depart'   => $depart, 
+            'plane' => $plane,
+            'price' => $price
+            
+           );
+
+
+           return view('book', ['data' => $data]);
+
+    }
+
+    
+}

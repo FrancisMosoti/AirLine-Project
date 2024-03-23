@@ -38,9 +38,44 @@
                     <p class="card-text">Class A price: {{ $departure->priceA }} </p>
                     <p class="card-text">Class B price: {{ $departure->priceB }} </p>
                     <p class="card-text">Class C price: {{ $departure->priceC }} </p>
-                    <a href="#" class="card-link">Book class A</a>
-                    <a href="#" class="card-link">Book class B</a>
-                    <a href="#" class="card-link">Book class C</a>
+
+                    <div class="d-flex justify-content-evenly">
+                        <form action="{{route('book-enq')}}" method="post">
+                            @csrf
+    
+                            <input type="text" value="{{ $departure->plane }}" name="name" id="" hidden>
+                            <input type="text" value="{{ $departure->depart }}" name="depart" id="" hidden>
+                            <input type="text" value="{{ $departure->destination }}" name="destination" id="" hidden>
+                            <input type="text" value="{{ $departure->priceA }}" name="price" id="" hidden>
+                            <button type="submit" class="btn btn-primary">Book Class A</button>
+                            
+                        </form>
+                        <form action="{{route('book-enq')}}" method="post">
+                            @csrf
+        
+                            <input type="text" value="{{ $departure->plane }}" name="name" id="" hidden>
+                            <input type="text" value="{{ $departure->depart }}" name="depart" id="" hidden>
+                            <input type="text" value="{{ $departure->destination }}" name="destination" id="" hidden>
+                            <input type="text" value="{{ $departure->priceB }}" name="price" id="" hidden>
+                            <button type="submit" class="btn btn-primary">Book Class B</button>
+                            
+                        </form>
+                        <form action="{{route('book-enq')}}" method="post">
+                            @csrf
+        
+                            <input type="text" value="{{ $departure->plane }}" name="name" id="" hidden>
+                            <input type="text" value="{{ $departure->depart }}" name="depart" id="" hidden>
+                            <input type="text" value="{{ $departure->destination }}" name="destination" id="" hidden>
+                            <input type="text" value="{{ $departure->priceC }}" name="price" id="" hidden>
+                            <button type="submit" class="btn btn-primary">Book Class C</button>
+                            
+                        </form>
+
+                    </div>
+
+
+                    
+                    
 
                 </div>
             </div>
