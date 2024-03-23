@@ -9,6 +9,7 @@ use App\Models\Schedule;
 
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -159,6 +160,7 @@ class HomeController extends Controller
         } else {
             return redirect()->back()->with('error', 'Schedule not found.');
         }
+
     }
 }
 
