@@ -24,14 +24,14 @@
             </div>
         @endif
         {{--  --}}
-        <div class="mx-auto w-50 w-lg-50 p-3 mt-5" style="background-color: rgb(0, 0, 0, 0.8);">
+        <div class="mx-auto w-75 w-lg-75 p-3 mt-5" style="background-color: rgb(0, 0, 0, 0.8);">
             <h3 style="color: rgb(252, 254, 254)">Available Flights</h3>
             <br />
 
 
             {{--  --}}
             @forelse ($departures as $departure)
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 30rem;">
                 <div class="card-body">
                     <h5 class="card-title">Plane: {{ $departure->plane }}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">From : {{ $departure->depart }} to: {{ $departure->destination }}</h6>
