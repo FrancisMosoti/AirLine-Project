@@ -1,12 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+
 
 .alef-regular{
     font-family: "Alef", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .alef-bold {
+}
+
+.alef-bold {
     font-family: "Alef", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -104,4 +106,16 @@ footer ul li{
 }
 footer .col-md-3{
    padding-left: 1rem; 
+
+}
+
+header {
+    background: #d9d9d9;
+}
+.margin-right {
+    margin-right: 20rem;
+}
+.hero-section {
+    background: url("images\bg1.jpg");
+
 }
