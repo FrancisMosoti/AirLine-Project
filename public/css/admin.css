@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+.side{
+    margin:0;
+    padding-top:2rem;
+    background: #160969;
+    color:#fff;
+    
+    
+    
+}
+.nav{
+    padding-top:2rem;
+
+}
+.nav ul li{
+    list-style:none;
+    padding:0.5rem;  
+
+}
+.nav ul li .btn{
+    background:#160969;
+    border;0.1rem black solid;
+    width:7rem;
+    z-index:15px;
+    box-shadow: 3px 4px 8px rgba(0,0,255,.5);
+}
+.btn{
+    background:#160969;
+    border;0.1rem black solid;
+    width:7rem;
+    z-index:15px;
+    box-shadow: 3px 4px 8px rgba(255,255,255,.5);}
+.nav ul li a{
+    text-decoration:none;
+    color:#fff;
+}
+.main-content{
+    padding:0;
+    margin:0;
+}

@@ -14,18 +14,30 @@
     <header class="bg-blue">
     <nav class="navbar navbar-expand-lg text-white">
   <div class="container-fluid">
-    <a class="navbar-brand margin-right text-white" href="#">Air <i class="fa-solid fa-plane-departure"></i> Away</a>
+    <a class="navbar-brand margin-right text-white font-size-lg" href="">Air <i class="fa-solid fa-plane-departure"></i> Away</a>
     <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse text-white" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active text-white pl-2" aria-current="page" href="#">Home</a>
-        <a class="nav-link text-white pl-2" href="#">Explore</a>
-        <a class="nav-link text-white pl-2" href="#">Booking</a>
-        <a class="nav-link text-white pl-2" >Help</a>
-      </div>
-    </div>
+    <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active text-white" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="#">Explore</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="">Booking</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="">Expirience</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="">Help</a>
+  </li>
+</ul>
   </div>
 </nav>
     </header>

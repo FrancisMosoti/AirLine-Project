@@ -1,3 +1,6 @@
+@extends('layouts.admin')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -181,3 +184,4 @@
     ></script>
   </body>
 </html>
+@endsection
