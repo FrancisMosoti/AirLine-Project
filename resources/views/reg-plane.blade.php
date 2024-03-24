@@ -24,7 +24,7 @@
           </div>
           @endif
         {{--  --}}
-        <div class="mx-auto w-lg-50 p-3 mt-5" style="background-color: rgb(0, 0, 0, 0.8);">
+        <div class="mx-auto w-50 w-lg-50 p-3 mt-5" style="background-color: rgb(0, 0, 0, 0.8);">
             <h3 style="color: rgb(252, 254, 254)">Register A Plane</h3>
             <br />
             <form action="{{route('reg-plane')}}" method="post">
