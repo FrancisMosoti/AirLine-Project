@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\Plane;
 use App\Models\Schedule;
+use Barryvdh\DomPDF\Facade\Pdf;
+use TCPDF;
+use Dompdf\Dompdf;
 
 class HomeController extends Controller
 {
@@ -53,9 +56,6 @@ class HomeController extends Controller
         return view('manage-flights', ['schedules' => Schedule::all()]);
     }
 
-    public function searchFlight(){
-        return view('search-flight');
-    }
 
 
 
@@ -111,27 +111,7 @@ class HomeController extends Controller
         
     }
 
-    public function flightSearch(Request $request)
-    {
-        $request->validate([
-            'date' => 'required|date_format:Y-m-d|after:yesterday',
-            'depart' => ['required','string'],
-            'destination' => ['required','string'],
-        ]);
 
-
-        $date  = $request->input('date');
-        $destination = $request->input('destination');
-        $depart = $request->input('depart');
-
-        $departures = Schedule::where('destination', $destination)
-                            ->where('depart', $depart)
-                            ->where('date', $date)
-                            ->get();
-
-        return view('available-flights', compact('departures'));
-        
-    }
 
     public function destroy($id)
     {
@@ -162,26 +142,7 @@ class HomeController extends Controller
         }
 
     }
-    public function book_Enq(Request $request)
-    {
-        // $date  = $request->input('date');
-        $destination = $request->input('destination');
-        $depart = $request->input('depart');
-        $plane = $request->input('name');
-        $price = $request->input('price');
 
-        $data = array(
-            'destination' => $destination, 
-            'depart'   => $depart, 
-            'plane' => $plane,
-            'price' => $price
-            
-           );
-
-
-           return view('book', ['data' => $data]);
-
-    }
 
     
 }
