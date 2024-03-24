@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/',[HomeController::class, 'index'])->name('home-url');
+Route::get('/',[App\Http\Controllers\PassengerController::class, 'index'])->name('home-url');
 
 
 Auth::routes();
@@ -26,15 +26,17 @@ Route::delete('/planes/{id}', [App\Http\Controllers\HomeController::class, 'dest
 Route::get('/manage-flight', [App\Http\Controllers\HomeController::class, 'manageFlight'])->name('manage.flight');
 Route::delete('/flight/{id}', [App\Http\Controllers\HomeController::class, 'destroyFlight'])->name('flight.destroy');
 
-Route::get('/search-flight', [App\Http\Controllers\HomeController::class, 'searchFlight'])->name('flight.search');
-Route::post('/search-flight', [App\Http\Controllers\HomeController::class, 'flightSearch'])->name('flight.search');
 
-Route::get('/flights', [App\Http\Controllers\BookController::class, 'flight'])->name('flights');
+// passenger controller
+Route::get('/search-flight', [App\Http\Controllers\PassengerController::class, 'searchFlight'])->name('flight.search');
+Route::post('/search-flight', [App\Http\Controllers\PassengerController::class, 'flightSearch'])->name('flight.search');
 
-Route::get('/change-booking', [App\Http\Controllers\BookController::class, 'changeFlight'])->name('change-booking');
-Route::get('/view-booking', [App\Http\Controllers\BookController::class, 'viewFlight'])->name('view-booking');
-Route::post('/book-enq', [App\Http\Controllers\HomeController::class, 'book_Enq'])->name('book-enq');
+// Route::get('/flights', [App\Http\Controllers\BookController::class, 'flight'])->name('flights');
+
+// Route::get('/change-booking', [App\Http\Controllers\BookController::class, 'changeFlight'])->name('change-booking');
+// Route::get('/view-booking', [App\Http\Controllers\BookController::class, 'viewFlight'])->name('view-booking');
+Route::post('/book-enq', [App\Http\Controllers\PassengerController::class, 'book_Enq'])->name('book-enq');
 
 
-Route::get('/generate-ticket', [App\Http\Controllers\HomeController::class, 'ticket'])->name('generate-ticket');
-Route::get('/ticket', [App\Http\Controllers\HomeController::class, 'pdf'])->name('ticket');
+Route::get('/generate-ticket', [App\Http\Controllers\PassengerController::class, 'ticket'])->name('generate-ticket');
+Route::get('/ticket', [App\Http\Controllers\PassengerController::class, 'pdf'])->name('ticket');
