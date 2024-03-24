@@ -1,3 +1,7 @@
+@extends('layouts.admin')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +49,7 @@
                 </div>
             </div>
             @empty
-                <p>No Flights</p>
+                <p class="text-danger fw-3">No Flights</p>
             @endforelse
 
             {{--  --}}
@@ -64,3 +68,4 @@
 </body>
 
 </html>
+@endsection

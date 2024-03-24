@@ -28,7 +28,7 @@
                     <center>
                         <div class="div_deg px-5">
                             <h1 style="color: rgb(252, 254, 254)">Login</h1>
-                            {{-- ======================= --}}
+                            
                             <form method="POST" action="">
                                 @csrf
 
@@ -89,10 +89,13 @@
                                                 {{ __('Forgot Your Password?') }}
                                             </a>
                                         @endif
+                                        <button type="" class="btn btn-primary" style="padding-left:-2rem;">
+                                            <a href="{{ route('register') }}" class="text-white pl-0" style="text-decoration: none; ">Create Account</a>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
-                            {{-- ===================== --}}
+                            
 
                         </div>
                     </center>
