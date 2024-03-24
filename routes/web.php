@@ -34,3 +34,7 @@ Route::get('/flights', [App\Http\Controllers\BookController::class, 'flight'])->
 Route::get('/change-booking', [App\Http\Controllers\BookController::class, 'changeFlight'])->name('change-booking');
 Route::get('/view-booking', [App\Http\Controllers\BookController::class, 'viewFlight'])->name('view-booking');
 Route::post('/book-enq', [App\Http\Controllers\HomeController::class, 'book_Enq'])->name('book-enq');
+
+
+Route::get('/generate-ticket', [App\Http\Controllers\HomeController::class, 'ticket'])->name('generate-ticket');
+Route::get('/ticket', [App\Http\Controllers\HomeController::class, 'pdf'])->name('ticket');

@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\Plane;
 use App\Models\Schedule;
+use Barryvdh\DomPDF\Facade\Pdf;
+use TCPDF;
+use Dompdf\Dompdf;
 
 class HomeController extends Controller
 {
@@ -177,10 +180,40 @@ class HomeController extends Controller
             'price' => $price
             
            );
+           
+
 
 
            return view('book', ['data' => $data]);
 
+    }
+
+    public function ticket(){
+// Create a new Dompdf instance
+$dompdf = new Dompdf();
+
+// HTML content for the ticket
+$html = '
+
+';
+
+// Load HTML content into Dompdf
+$dompdf->loadHtml($html);
+
+// Set paper size and orientation
+$dompdf->setPaper('A5', 'portrait');
+
+// Render PDF (optional: you can also save to a file instead of outputting to the browser)
+$dompdf->render();
+
+// Output the generated PDF to the browser
+$dompdf->stream('flight_ticket.pdf', ['Attachment' => false]);
+        
+    }
+
+    public function pdf(){
+        return view('pdf');
+        
     }
 
     
