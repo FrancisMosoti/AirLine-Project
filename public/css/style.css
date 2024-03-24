@@ -16,7 +16,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.header.bg{
+    background:rgba(0,0,0,0.2);
+}
 .bg-blue {
     background: #160969;
     color: white;
@@ -101,9 +103,13 @@ footer .col-md-3 {
     padding-left: 1rem;
 }
 
-header {
-    background: #d9d9d9;
-}
+
 .margin-right {
     margin-right: 20rem;
+}
+.search-flights{
+    border: 1px solid grey;
+    padding:1rem;
+    margin-top:-3rem;
+    background:#160969;
 }
