@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Plane;
+use App\Models\Schedule;
+use Barryvdh\DomPDF\Facade\Pdf;
+use TCPDF;
+use Dompdf\Dompdf;
+
 class PassengerController extends Controller
 {
     public function index()
