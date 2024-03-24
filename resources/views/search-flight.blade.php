@@ -25,7 +25,7 @@
         @endif
         {{--  --}}
         <div class="mx-auto w-50 w-lg-50 p-3 mt-5" style="background-color: rgb(0, 0, 0, 0.8);">
-            <h3 style="color: rgb(252, 254, 254)">Schedule A Flight</h3>
+            <h3 style="color: rgb(252, 254, 254)">Search A Flight</h3>
             <br />
             <form action="{{ route('flight.search') }}" method="post">
                 @csrf

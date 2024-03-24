@@ -8,7 +8,8 @@
             <h2 class="alef-bold">Explore the World with Air - Away</h2>
             <p class="alef-regular">Sign up to receive exclusive flight offers and hotel deals tailored to your dream destinations.</p>
 
-            <button class="btn btn-main">BOOK YOUR FLIGHT</button>
+            <a href="{{route('flight.search')}}" class="btn btn-main">BOOK YOUR FLIGHT</a>
+
         </div>
     </div>
     <div class="row search-flights">
