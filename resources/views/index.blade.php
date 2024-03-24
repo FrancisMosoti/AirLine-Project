@@ -3,7 +3,7 @@
 @section('content')
 
 <main>
-    <div class="hero-section" style="">
+    <div class="hero-section">
         <div class="hero-text text-center text-white">
             <h2 class="alef-bold">Explore the World with Air - Away</h2>
             <p class="alef-regular">Sign up to receive exclusive flight offers and hotel deals tailored to your dream destinations.</p>
