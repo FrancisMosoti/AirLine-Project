@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Bookings;
 
 class TicketController extends Controller
 {
@@ -43,13 +44,7 @@ class TicketController extends Controller
         $time = $request->input('time');
         $date = $request->input('date');
 
-        // Plane::create([
-        //     'Plane' => $request->input('plane'),
-        //     'TicketNumber' => $ticket,
-        //     'Class_B' => $request->input('classB'),
-        //     'Class_C' => $request->input('classC'),
-            
-        // ]);
+        
 
         $credential = array(
             $plane,
@@ -59,7 +54,7 @@ class TicketController extends Controller
         // dd($credential);
 
         if(($credential[0] == null) && ($credential[1] == null)){
-            return redirect('/')->with('errror', 'please search too book`');
+            return redirect('/')->with('error', 'Please search flight to book`');
 
         }
 
@@ -67,6 +62,20 @@ class TicketController extends Controller
             'name' => 'required|string',
             'email' => ['required','string', 'email'],
             'phone' => ['required','numeric'],
+        ]);
+
+        Bookings::create([
+            'Plane' => $plane,
+            'TicketNumber' => $ticket,
+            'Price' => $price,
+            'Depart' => $depart,
+            'Destination' => $destination,
+            'Name' => $request->input('name'),
+            'Email' => $request->input('email'),
+            'Phone' => $request->input('phone'),
+            'Date' => $date,
+            'Time' => $time,
+            
         ]);
 
 

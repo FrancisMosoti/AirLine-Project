@@ -43,3 +43,6 @@ Route::get('/book-enq', [App\Http\Controllers\PassengerController::class, 'book_
 Route::post('/generate-ticket', [App\Http\Controllers\TicketController::class, 'generateTicket'])->name('generate-ticket');
 Route::get('/generate-ticket', [App\Http\Controllers\TicketController::class, 'generateTicket'])->name('generate-ticket');
 Route::get('/help', [App\Http\Controllers\PassengerController::class, 'help'])->name('help');
+
+
+Route::post('/search-ticket', [App\Http\Controllers\PassengerController::class, 'searchTicket'])->name('search.ticket');

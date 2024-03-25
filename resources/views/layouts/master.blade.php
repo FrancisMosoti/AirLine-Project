@@ -32,7 +32,11 @@
     <a class="nav-link text-white" href="">Booking</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-white" href="">Expirience</a>
+    <!-- Button trigger modal -->
+    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Download ticket
+    </a>
+    {{-- <a class="nav-link text-white" href="">Expirience</a> --}}
   </li>
   <li class="nav-item">
     <a class="nav-link text-white" href="">Help</a>

@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('Destination');
             $table->string('Name');
             $table->string('Email');
+            $table->string('Phone');
             $table->string('Date');
             $table->string('Time');
-            $table->string('Email');
             $table->softDeletes();
             
 
