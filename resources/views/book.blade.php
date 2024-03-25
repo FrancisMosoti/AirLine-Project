@@ -30,34 +30,48 @@
 
 
             {{--  --}}
-            <form action="" method="post">
+            <form action="{{route('generate-ticket')}}" method="post">
                 @csrf
 
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-6 col-form-label text-light">Plane Name</label>
                     <div class="col-sm-6">
-                        <input type="text" readonly class="form-control-plaintext text-primary" id="staticEmail"
+                        <input type="text" name="plane" readonly class="form-control-plaintext text-primary" id="staticEmail"
                             value="{{ $data['plane'] }}">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-6 col-form-label text-light">Departure Date</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="date" readonly class="form-control-plaintext text-primary" id="staticEmail"
+                            value="{{ $data['date'] }}">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-6 col-form-label text-light">Departure time</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="time" readonly class="form-control-plaintext text-primary" id="staticEmail"
+                            value="{{ $data['time'] }}">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-6 col-form-label text-light">Price</label>
                     <div class="col-sm-6">
-                        <input type="text" readonly class="form-control-plaintext text-primary" id="staticEmail"
+                        <input type="text" name="price" readonly class="form-control-plaintext text-primary" id="staticEmail"
                             value="{{ $data['price'] }}">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-6 col-form-label text-light">Where From</label>
+                    <label for="staticEmail"  class="col-sm-6 col-form-label text-light">Where From</label>
                     <div class="col-sm-6">
-                        <input type="text" readonly class="form-control-plaintext text-primary" id="staticEmail"
+                        <input type="text" name="depart" readonly class="form-control-plaintext text-primary" id="staticEmail"
                             value="{{ $data['depart'] }}">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-6 col-form-label text-light">Destination</label>
                     <div class="col-sm-6">
-                        <input type="text" readonly class="form-control-plaintext text-primary" id="staticEmail"
+                        <input type="text" name="destination" readonly class="form-control-plaintext text-primary" id="staticEmail"
                             value="{{ $data['destination'] }}">
                     </div>
                 </div>

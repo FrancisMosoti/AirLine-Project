@@ -49,6 +49,8 @@
                             <input type="text" value="{{ $departure->depart }}" name="depart" id="" hidden>
                             <input type="text" value="{{ $departure->destination }}" name="destination" id="" hidden>
                             <input type="text" value="{{ $departure->priceA }}" name="price" id="" hidden>
+                            <input type="text" value="{{ $departure->date }}" name="date" id="" hidden>
+                            <input type="text" value="{{ $departure->time }}" name="time" id="" hidden>
                             <button type="submit" class="btn btn-primary">Book Class A</button>
                             
                         </form>
@@ -59,6 +61,8 @@
                             <input type="text" value="{{ $departure->depart }}" name="depart" id="" hidden>
                             <input type="text" value="{{ $departure->destination }}" name="destination" id="" hidden>
                             <input type="text" value="{{ $departure->priceB }}" name="price" id="" hidden>
+                            <input type="text" value="{{ $departure->date }}" name="date" id="" hidden>
+                            <input type="text" value="{{ $departure->time }}" name="time" id="" hidden>
                             <button type="submit" class="btn btn-primary">Book Class B</button>
                             
                         </form>
@@ -69,6 +73,8 @@
                             <input type="text" value="{{ $departure->depart }}" name="depart" id="" hidden>
                             <input type="text" value="{{ $departure->destination }}" name="destination" id="" hidden>
                             <input type="text" value="{{ $departure->priceC }}" name="price" id="" hidden>
+                            <input type="text" value="{{ $departure->date }}" name="date" id="" hidden>
+                            <input type="text" value="{{ $departure->time }}" name="time" id="" hidden>
                             <button type="submit" class="btn btn-primary">Book Class C</button>
                             
                         </form>

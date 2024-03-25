@@ -16,7 +16,7 @@
     <form action="{{ route('flight.search') }}" method="post">
                 @csrf
 
-               <div class="row">
+               <div class="row d-flex justify-content-around">
                <div class="col-md-3">
                     <label style="color: rgb(252, 254, 254)" id="plane2">Departure date</label>
                     <input type="date" name="date" id="plane2"

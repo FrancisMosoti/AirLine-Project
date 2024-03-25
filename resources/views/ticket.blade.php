@@ -42,7 +42,7 @@
     </style>
 </head>
 <body>
-    <div class="ticket">
+    <div class="ticket p-3">
         <table>
             
             <br> 
@@ -54,23 +54,23 @@
             </tr>
             <br>
             <tr>
-                <td>XYZ123</td>
-                <td>New York (JFK)</td>
-                <td>London (LHR)</td>
-                <td>January 1, 2025, 10:00 AM</td>
+                <td>{{$data['plane']}}</td>
+                <td>{{$data['depart']}}</td>
+                <td>{{$data['destination']}}</td>
+                <td>{{$data['date']}} - {{$data['time']}}</td>
             </tr>  
             <br>         
             <tr>
-            <td> Name: John Doe </td>
+            <td> Name: {{$data['name']}}</td>
                <td>Seat: 22A</td>
-            <td>Phone: +254712345678</td>
-                    <td>Email: example@gmail.com</td>
+            <td>Phone: {{$data['phone']}}</td>
+                    <td>Email: {{$data['email']}}</td>
             </tr>
             <br>
             <tr>
                 <th colspan="3">Thank you for choosing Air-Away</th>
                 
-                <th><strong>Cost: 869$</strong></th>
+                <th><strong>Cost: ${{$data['price']}}</strong></th>
             </tr>
             <br>
         </table>

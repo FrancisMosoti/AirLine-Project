@@ -37,7 +37,9 @@ Route::post('/search-flight', [App\Http\Controllers\PassengerController::class, 
 // Route::get('/change-booking', [App\Http\Controllers\BookController::class, 'changeFlight'])->name('change-booking');
 // Route::get('/view-booking', [App\Http\Controllers\BookController::class, 'viewFlight'])->name('view-booking');
 Route::post('/book-enq', [App\Http\Controllers\PassengerController::class, 'book_Enq'])->name('book-enq');
+Route::get('/book-enq', [App\Http\Controllers\PassengerController::class, 'book_Enq'])->name('book-enq');
 
 
-Route::get('/generate-ticket', [App\Http\Controllers\PassengerController::class, 'ticket'])->name('generate-ticket');
-Route::get('/ticket', [App\Http\Controllers\PassengerController::class, 'pdf'])->name('ticket');
+Route::post('/generate-ticket', [App\Http\Controllers\TicketController::class, 'generateTicket'])->name('generate-ticket');
+Route::get('/generate-ticket', [App\Http\Controllers\TicketController::class, 'generateTicket'])->name('generate-ticket');
+Route::get('/help', [App\Http\Controllers\PassengerController::class, 'help'])->name('help');

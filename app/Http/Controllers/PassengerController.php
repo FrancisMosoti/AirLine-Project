@@ -16,6 +16,10 @@ class PassengerController extends Controller
     {
         return view('index');
     }
+    public function help()
+    {
+        return view('help');
+    }
 
     public function searchFlight(){
         return view('search-flight');
@@ -51,12 +55,16 @@ class PassengerController extends Controller
         $depart = $request->input('depart');
         $plane = $request->input('name');
         $price = $request->input('price');
+        $time = $request->input('time');
+        $date = $request->input('date');
 
         $data = array(
             'destination' => $destination, 
             'depart'   => $depart, 
             'plane' => $plane,
-            'price' => $price
+            'price' => $price,
+            'date' => $date,
+            'time' => $time,
             
            );
            
