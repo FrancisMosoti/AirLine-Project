@@ -39,7 +39,14 @@
     {{-- <a class="nav-link text-white" href="">Expirience</a> --}}
   </li>
   <li class="nav-item">
-    <a class="nav-link text-white" href="">Help</a>
+    <!-- Button trigger modal -->
+    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Manage ticket
+    </a>
+    {{-- <a class="nav-link text-white" href="">Expirience</a> --}}
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="{{route('help')}}">Help</a>
   </li>
 </ul>
   </div>
