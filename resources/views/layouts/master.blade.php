@@ -40,7 +40,7 @@
   </li>
   <li class="nav-item">
     <!-- Button trigger modal -->
-    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#manage">
       Manage ticket
     </a>
     {{-- <a class="nav-link text-white" href="">Expirience</a> --}}
